@@ -89,6 +89,14 @@ def do_correlation_analysis_driver(data):
     print("Analysis Done!!")
 
 
+def plot_histogram_driver(data, columns = None):
+    plotter = HistPlotter(data)
+    if columns:
+        plotter.plot_for_columns(columns = columns)
+    else:
+        plotter.plot_for_all_columns()
+
+
 def save_dataset(data, file_name):
     data.to_csv(file_name)
     print("Data Saved!!")
@@ -125,6 +133,8 @@ if __name__ == '__main__':
 
     # _______________________Driver Data Advanced Correlation Analysis_____________________ #
     # do_correlation_analysis_driver(df)
+    #________________________Driver Data Histogram Plots___________________________________ #
+    plot_histogram_driver(df)
 
 
 

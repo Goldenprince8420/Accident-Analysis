@@ -1,5 +1,3 @@
-import numpy as np
-import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -23,3 +21,26 @@ class DriverExplorer:
         sns.histplot(self.frame[column])
         plt.show()
 
+
+class HistPlotter:
+    def __init__(self, data):
+        self.frame = data
+        self.columns = None
+
+    def plot_for_all_columns(self):
+        plt.figure(figsize = (10, 8))
+        pal_idx = 1
+        for column in self.frame.columns:
+            sns.histplot(self.frame[column], palette = sns.color_palette("hls", pal_idx))
+            plt.show()
+            pal_idx += 1
+        print("Done!!")
+
+    def plot_for_columns(self, columns = None):
+        plt.figure(figsize = (10, 8))
+        pal_idx = 1
+        for column in columns:
+            sns.histplot(self.frame[column], palette = sns.color_palette("hls", pal_idx))
+            plt.show()
+            pal_idx += 1
+        print("Done!!")
