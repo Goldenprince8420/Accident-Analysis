@@ -28,7 +28,7 @@ from scipy import stats
 # print(data_skewness)
 # # print(dataset_desc.kurtosis)
 
-DATA_PATH_PRAXEOLOGY = "driver_processed.csv"
+DATA_PATH_PRAXEOLOGY = "data/driver_processed.csv"
 df_encoded_p = get_processed_p_data(DATA_PATH_PRAXEOLOGY)
 df_explorer = DriverExplorer(df_encoded_p)
 print(list(df_encoded_p.columns))

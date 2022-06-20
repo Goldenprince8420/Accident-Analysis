@@ -125,7 +125,7 @@ if __name__ == '__main__':
     #                        'Crash_Type']:
     #       df_explorer.show_histogram(column)
     # df_explorer.show_heatmap()
-    df_path = 'driver_readied.csv'
+    df_path = 'data/driver_readied.csv'
     dataclass = ReadData(df_path)
     df = dataclass.get_data()
     df.pop(list(df.columns)[0])
