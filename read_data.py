@@ -10,6 +10,7 @@ class ReadData:
         self.frame = pd.read_csv(self.path)
 
     def get_data(self):
+        self.read()
         return self.frame
 
 
@@ -33,3 +34,4 @@ class DataStat:
 
     def print_dimensions(self):
         print("Number of Rows: {}\nNumber of Columns: {}".format(self.num_rows, self.num_cols))
+
