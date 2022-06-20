@@ -4,5 +4,4 @@ git add README.md   data_encoded_p.csv     feature_normalizer.py  lin_reg_p.csv 
 git commit -m "Main Push"
 git remote add origin https://github.com/Goldenprince8420/Accident-Analysis.git
 git remote -v
-git pull ...
-git push origin main
+git push -u -f origin main
